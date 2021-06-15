@@ -1,5 +1,13 @@
-function initMap(){
-  map = new google.maps.Map(document.getElementById('map'), {
+
+// Create the script tag, set the appropriate attributes
+var script = document.createElement('script');
+script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCOQcFm1xU46vmFRWIEk9RXd4OisecsmkU&map_ids=18b4a38d036abff2&callback=initMap';
+script.defer = true;
+
+// Attach your callback function to the `window` object
+window.initMap = function() {
+  // JS API is loaded and available
+	map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 34.66793906192621, lng: 135.43047658225953},
     zoom: 18,
     mapId: '18b4a38d036abff2',
@@ -82,4 +90,8 @@ function initMap(){
     infowindow.open(map, marker);
   });
 }
-}
+};
+
+// Append the 'script' element to 'head'
+document.head.appendChild(script);
+ 
