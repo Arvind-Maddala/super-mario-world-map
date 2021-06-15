@@ -10,7 +10,7 @@ Superia mario world map is a custom google map made using JS.
 
 *  #### HTML
 * #### CSS
-* #### Google Map API
+* #### GOOGLE MAP API
 * #### JAVASCRIPT
 
 
